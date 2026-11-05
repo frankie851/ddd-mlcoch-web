@@ -1,0 +1,99 @@
+/* NÁVRH 5 – Retro řemeslný: nálepkový styl 50. let, krémová a červená, odznakové logo.
+   Písma Alfa Slab One (nadpisy), Pacifico (ozdobné popisky), Bitter (text). */
+:root { --krem: #f6ead2; --krem2: #efdcb8; --cervena: #c8322b; --cervena-tmava: #9e2420; --tmava: #2b2622; --tlumeny: #574b41; --modra: #2f5d73; }
+body { font-family: "Bitter", "DejaVu Serif", serif; color: var(--tmava); background: var(--krem); font-size: 1.0625rem; line-height: 1.65; }
+h1, h2, h3 { font-family: "Alfa Slab One", "DejaVu Serif", serif; font-weight: 400; line-height: 1.1; }
+.doplnit { background: #fff; color: var(--cervena-tmava); border: 2px dashed var(--cervena); padding: 0 .3em; border-radius: 6px; font-weight: 700; }
+
+.hlavicka { background: var(--krem); border-bottom: 4px solid var(--tmava); position: relative; }
+.hlavicka::after { content: ""; position: absolute; left: 0; right: 0; bottom: -14px; height: 10px; background: radial-gradient(circle at 10px -2px, var(--tmava) 9px, transparent 10px) 0 0 / 20px 10px repeat-x; }
+.hlavicka__in { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 22px; padding-block: 14px; }
+.menu { order: 3; width: 100%; }
+.menu ul { display: flex; flex-wrap: wrap; gap: 0 18px; }
+.menu a { display: inline-block; padding: 4px 0; text-decoration: none; font-weight: 700; color: var(--tmava); text-transform: uppercase; font-size: .88rem; letter-spacing: .08em; }
+.menu a:hover { color: var(--cervena); }
+.btn--tel { margin-left: auto; background: var(--cervena); color: #fff; border: 3px solid var(--tmava); border-radius: 999px; box-shadow: 3px 3px 0 var(--tmava); min-height: 44px; font-size: .95rem; padding: .35em 1em; }
+.btn--tel .doplnit { background: transparent; border: 0; color: #fff; padding: 0; }
+@media (min-width: 960px) { .menu { order: 2; width: auto; margin-left: auto; } .btn--tel { margin-left: 0; order: 3; } }
+@media (max-width: 480px) { .btn--tel { font-size: .8rem; padding: .3em .8em; } }
+
+.uvod { overflow: hidden; }
+.uvod__in { display: grid; gap: 24px; align-items: center; padding-block: 56px 64px; }
+@media (min-width: 900px) { .uvod__in { grid-template-columns: 1.2fr 1fr; padding-block: 80px; } }
+.nadtitulek { font-family: "Pacifico", cursive; color: var(--cervena); font-size: 1.35rem; }
+.uvod h1 { font-size: clamp(2.8rem, 10vw, 5.4rem); margin: 8px 0 16px; color: var(--tmava); text-shadow: 4px 4px 0 var(--krem2), 5px 5px 0 var(--cervena); }
+.perex { font-size: 1.2rem; color: var(--tlumeny); max-width: 32em; }
+.akce { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+.btn--hlavni { background: var(--cervena); color: #fff; border: 3px solid var(--tmava); border-radius: 12px; box-shadow: 5px 5px 0 var(--tmava); font-size: 1.15rem; padding: .6em 1.5em; transition: transform .15s, box-shadow .15s; }
+.btn--hlavni:hover { transform: translate(2px, 2px); box-shadow: 3px 3px 0 var(--tmava); }
+.btn--vedlejsi { background: #fff; color: var(--tmava); border: 3px solid var(--tmava); border-radius: 12px; box-shadow: 5px 5px 0 var(--tmava); }
+.uvod__odznak { width: min(380px, 86vw); margin-inline: auto; }
+.uvod__odznak svg { display: block; width: 100%; height: auto; }
+.paprsky { transform-origin: 160px 160px; animation: d5-otoc 60s linear infinite; }
+@keyframes d5-otoc { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .paprsky { animation: none; } }
+
+.sekce { padding-block: 72px; }
+.sekce__hlava { text-align: center; margin: 0 auto 40px; max-width: 42rem; }
+.sekce h2 { font-size: clamp(2rem, 6vw, 3.2rem); color: var(--tmava); }
+.sekce__hlava p { margin-top: 12px; color: var(--tlumeny); }
+.sluzby { background: var(--cervena); color: #fff; position: relative; }
+.sluzby::before, .sluzby::after { content: ""; position: absolute; left: 0; right: 0; height: 16px; background: radial-gradient(circle at 12px 0, var(--krem) 11px, transparent 12px) 0 0 / 24px 16px repeat-x; }
+.sluzby::before { top: 0; }
+.sluzby::after { bottom: 0; transform: rotate(180deg); }
+.sluzby h2 { color: #fff; text-shadow: 3px 3px 0 var(--tmava); }
+.sluzby .sekce__hlava p { color: #fde9e4; }
+.sluzby__mrizka { display: grid; gap: 28px; }
+@media (min-width: 860px) { .sluzby__mrizka { grid-template-columns: repeat(3, 1fr); } }
+.sluzba { background: var(--krem); color: var(--tmava); border: 3px solid var(--tmava); border-radius: 18px; padding: 26px; box-shadow: 7px 7px 0 var(--tmava); }
+.sluzba:nth-child(1) { transform: rotate(-1deg); } .sluzba:nth-child(3) { transform: rotate(1deg); }
+.sluzba__ikona { display: inline-grid; place-items: center; width: 60px; height: 60px; border-radius: 50%; background: var(--cervena); color: #fff; border: 3px solid var(--tmava); margin-bottom: 12px; }
+.sluzba__ikona .ikona { width: 30px; height: 30px; }
+.sluzba h3 { font-size: 1.7rem; color: var(--cervena-tmava); margin-bottom: 8px; }
+.sluzba__co { font-weight: 700; }
+.sluzba p + p { margin-top: 8px; }
+
+.prokoho__mrizka { display: grid; gap: 24px; }
+@media (min-width: 860px) { .prokoho__mrizka { grid-template-columns: repeat(3, 1fr); } }
+.skupina { text-align: center; padding: 8px 12px; }
+.skupina__ikona { display: inline-grid; place-items: center; width: 88px; height: 88px; border-radius: 50%; border: 3px solid var(--tmava); background: #fff; color: var(--modra); outline: 3px dashed var(--cervena); outline-offset: 5px; margin-bottom: 18px; }
+.skupina__ikona .ikona { width: 40px; height: 40px; }
+.skupina h3 { font-size: 1.45rem; margin-bottom: 8px; }
+.skupina p { color: var(--tlumeny); }
+
+.postup { background: var(--krem2); border-block: 4px solid var(--tmava); }
+.postup__kroky { display: grid; gap: 24px; }
+@media (min-width: 860px) { .postup__kroky { grid-template-columns: repeat(4, 1fr); } }
+.krok { background: #fff; border: 3px solid var(--tmava); border-radius: 14px; padding: 46px 22px 22px; position: relative; margin-top: 26px; text-align: center; }
+.krok__cislo { position: absolute; top: -28px; left: 50%; transform: translateX(-50%); width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; background: var(--cervena); color: #fff; border: 3px solid var(--tmava); font-family: "Alfa Slab One", serif; font-size: 1.6rem; }
+.krok__ikona { display: none; }
+.krok h3 { font-size: 1.3rem; margin-bottom: 6px; color: var(--cervena-tmava); }
+.krok p { color: var(--tlumeny); }
+
+.opravneni__in { display: grid; gap: 28px; }
+@media (min-width: 900px) { .opravneni__in { grid-template-columns: 1.1fr 1fr; align-items: center; } }
+.opravneni__text h2 { margin-bottom: 16px; }
+.opravneni__text p + p { margin-top: 12px; }
+.opravneni__seznam { display: grid; gap: 12px; background: #fff; border: 3px solid var(--tmava); border-radius: 18px; padding: 22px; box-shadow: 7px 7px 0 var(--modra); }
+.opravneni__seznam li { display: flex; gap: 12px; }
+.opravneni__seznam li + li { border-top: 2px dotted #cbb894; padding-top: 12px; }
+.opravneni__seznam .ikona { width: 28px; height: 28px; color: var(--cervena); }
+
+.kontakt { background: var(--modra); color: #fff; }
+.kontakt__in { display: grid; gap: 28px; }
+@media (min-width: 900px) { .kontakt__in { grid-template-columns: 1fr 1.6fr; align-items: center; } }
+.kontakt h2 { color: #fff; text-shadow: 3px 3px 0 var(--tmava); }
+.kontakt__uvod p { margin-top: 10px; font-size: 1.15rem; color: #e4eef2; }
+.kontakt__udaje { display: grid; gap: 0 24px; background: var(--krem); color: var(--tmava); border: 3px solid var(--tmava); border-radius: 18px; padding: 10px 24px; box-shadow: 7px 7px 0 var(--tmava); }
+@media (min-width: 600px) { .kontakt__udaje { grid-template-columns: 1fr 1fr; } }
+.kontakt__polozka { padding: 12px 0; border-bottom: 2px dotted #cbb894; }
+.kontakt__polozka dt { display: flex; gap: 8px; align-items: center; font-weight: 700; color: var(--cervena-tmava); text-transform: uppercase; font-size: .85rem; letter-spacing: .06em; }
+.kontakt__polozka dd { margin-top: 2px; font-weight: 700; }
+
+.paticka { background: var(--tmava); color: #e9dcc4; padding-block: 40px; font-size: .95rem; --logo-ink: #f6ead2; --logo-ink2: #d8c9ad; }
+.paticka__in { display: grid; gap: 20px; text-align: center; justify-items: center; }
+.logo-slot--paticka { --logo-vyska: 50px; --logo-vyska-mobil: 40px; }
+.paticka__znacka p { margin-top: 8px; }
+.paticka__udaje span { color: #bcae94; }
+.paticka .doplnit { background: #3d3530; color: #ffd27a; border-color: #d98b5f; }
+.paticka__copy { font-family: "Pacifico", cursive; color: #e9a28f; font-size: 1.1rem; }
