@@ -30,3 +30,8 @@ a { color: inherit; }
   .menu ul { column-gap: 16px !important; }
   .menu a { font-size: .92rem !important; }
 }
+/* Nejužší mobily (do 400 px): menší logo a tlačítko, aby se vešly vedle sebe */
+@media (max-width: 400px) {
+  .hlavicka .logo-slot { height: 36px; }
+  .hlavicka .btn--tel { font-size: .74rem !important; padding: .3em .6em !important; gap: .35em; }
+}
