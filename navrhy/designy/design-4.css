@@ -1,0 +1,97 @@
+/* NÁVRH 4 – Tmavý technický: antracit a jedna jasná limetková barva, precizní a moderní.
+   Písma Space Grotesk (nadpisy), IBM Plex Sans (text), IBM Plex Mono (štítky). */
+:root { --pozadi: #0f1419; --panel: #161d24; --panel2: #1c252e; --linka: #2a3440; --text: #e6edf3; --tlumeny: #a4b3c1; --akcent: #b6f23c; --akcent-text: #0f1419; }
+body { font-family: "IBM Plex Sans", "DejaVu Sans", sans-serif; color: var(--text); font-size: 1.0625rem; line-height: 1.65;
+  background: var(--pozadi); background-image: linear-gradient(var(--linka) 1px, transparent 1px), linear-gradient(90deg, var(--linka) 1px, transparent 1px);
+  background-size: 64px 64px; background-attachment: fixed; background-position: -1px -1px; }
+body::before { content: ""; position: fixed; inset: 0; background: radial-gradient(ellipse at top, rgba(15,20,25,.55), var(--pozadi) 70%); pointer-events: none; z-index: -1; }
+h1, h2, h3 { font-family: "Space Grotesk", "DejaVu Sans", sans-serif; font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; }
+.doplnit { color: var(--akcent); background: rgba(182,242,60,.1); border: 1px dashed rgba(182,242,60,.6); padding: 0 .3em; border-radius: 4px; font-family: "IBM Plex Mono", monospace; font-weight: 500; font-size: .92em; }
+
+.hlavicka { position: sticky; top: 0; z-index: 20; background: rgba(15,20,25,.92); border-bottom: 1px solid var(--linka); backdrop-filter: blur(8px); --logo-ink: #e6edf3; --logo-ink2: #a4b3c1; }
+.hlavicka__in { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px; padding-block: 12px; }
+.menu { order: 3; width: 100%; }
+.menu ul { display: flex; flex-wrap: wrap; gap: 0 20px; }
+.menu a { display: inline-block; padding: 4px 0; font-family: "IBM Plex Mono", monospace; font-weight: 500; font-size: .9rem; text-decoration: none; color: var(--tlumeny); }
+.menu a::before { content: "/"; color: var(--akcent); margin-right: 4px; }
+.menu a:hover { color: var(--text); }
+.btn--tel { margin-left: auto; border: 1px solid var(--akcent); color: var(--akcent); border-radius: 8px; min-height: 44px; font-size: .95rem; padding: .4em 1em; }
+.btn--tel .doplnit { border: 0; background: transparent; padding: 0; }
+.btn--tel:hover { background: rgba(182,242,60,.12); }
+@media (min-width: 960px) { .menu { order: 2; width: auto; margin-left: auto; } .btn--tel { margin-left: 0; order: 3; } }
+@media (max-width: 480px) { .btn--tel { font-size: .8rem; padding: .35em .7em; } }
+
+.uvod__in { display: grid; gap: 24px; align-items: center; padding-block: 56px 72px; }
+@media (min-width: 900px) { .uvod__in { grid-template-columns: 1.25fr 1fr; padding-block: 96px 112px; } }
+.nadtitulek { font-family: "IBM Plex Mono", monospace; font-weight: 500; color: var(--akcent); font-size: .95rem; }
+.nadtitulek::before { content: "● "; }
+.uvod h1 { font-size: clamp(2.8rem, 9vw, 5.4rem); margin: 16px 0; }
+.perex { font-size: 1.2rem; color: var(--tlumeny); max-width: 32em; }
+.akce { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+.btn--hlavni { background: var(--akcent); color: var(--akcent-text); border-radius: 8px; font-size: 1.1rem; padding: .7em 1.6em; }
+.btn--hlavni:hover { background: #cbff5c; }
+.btn--vedlejsi { border: 1px solid var(--linka); background: var(--panel); color: var(--text); border-radius: 8px; }
+.btn--vedlejsi:hover { border-color: var(--tlumeny); }
+.uvod__kresba { width: 100%; max-width: 400px; height: auto; display: block; margin-inline: auto; }
+.radar { transform-origin: 200px 200px; animation: d4-otoc 8s linear infinite; }
+@keyframes d4-otoc { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .radar { animation: none; } }
+
+.sekce { padding-block: 72px; border-top: 1px solid var(--linka); counter-increment: sekce; }
+main { counter-reset: sekce; }
+.sekce h2 { font-size: clamp(1.9rem, 5vw, 2.8rem); }
+.sekce h2::before { content: "0" counter(sekce) " — "; display: block; font-family: "IBM Plex Mono", monospace; font-weight: 500; font-size: .9rem; color: var(--akcent); letter-spacing: 0; margin-bottom: 10px; }
+.sekce__hlava { margin-bottom: 36px; max-width: 44rem; }
+.sekce__hlava p { margin-top: 10px; color: var(--tlumeny); font-size: 1.1rem; }
+
+.sluzby__mrizka, .prokoho__mrizka { display: grid; gap: 1px; background: var(--linka); border: 1px solid var(--linka); border-radius: 12px; overflow: hidden; }
+@media (min-width: 860px) { .sluzby__mrizka, .prokoho__mrizka { grid-template-columns: repeat(3, 1fr); } }
+.sluzba, .skupina { background: var(--panel); padding: 28px; }
+.sluzba:hover, .skupina:hover { background: var(--panel2); }
+.sluzba__ikona, .skupina__ikona { color: var(--akcent); margin-bottom: 18px; }
+.sluzba__ikona .ikona, .skupina__ikona .ikona { width: 32px; height: 32px; stroke-width: 1.5; }
+.sluzba h3, .skupina h3 { font-size: 1.45rem; margin-bottom: 8px; }
+.sluzba__co { color: var(--text); font-weight: 600; }
+.sluzba p + p { margin-top: 8px; }
+.sluzba p:not(.sluzba__co), .skupina p { color: var(--tlumeny); }
+.sluzba strong { font-family: "IBM Plex Mono", monospace; font-weight: 500; color: var(--akcent); font-size: .85em; }
+
+.postup__kroky { display: grid; gap: 16px; }
+@media (min-width: 860px) { .postup__kroky { grid-template-columns: repeat(4, 1fr); } }
+.krok { border: 1px solid var(--linka); background: var(--panel); border-radius: 12px; padding: 24px; position: relative; }
+.krok__cislo { font-family: "IBM Plex Mono", monospace; font-size: .9rem; color: var(--akcent); }
+.krok__cislo::before { content: "KROK 0"; }
+.krok__ikona { color: var(--text); margin: 14px 0 10px; }
+.krok__ikona .ikona { width: 30px; height: 30px; stroke-width: 1.5; }
+.krok h3 { font-size: 1.3rem; margin-bottom: 6px; }
+.krok p { color: var(--tlumeny); }
+
+.opravneni__in { display: grid; gap: 32px; }
+@media (min-width: 900px) { .opravneni__in { grid-template-columns: 1.1fr 1fr; } }
+.opravneni__text h2 { margin-bottom: 18px; }
+.opravneni__text p { color: var(--tlumeny); }
+.opravneni__text p + p { margin-top: 12px; }
+.opravneni__seznam { display: grid; gap: 12px; }
+.opravneni__seznam li { display: flex; gap: 14px; padding: 18px; border: 1px solid var(--linka); border-left: 3px solid var(--akcent); border-radius: 8px; background: var(--panel); }
+.opravneni__seznam .ikona { width: 26px; height: 26px; color: var(--akcent); }
+.opravneni__seznam li > div { color: var(--tlumeny); }
+.opravneni__seznam strong { color: var(--text); }
+
+.kontakt__in { display: grid; gap: 28px; }
+@media (min-width: 900px) { .kontakt__in { grid-template-columns: 1fr 1.6fr; } }
+.kontakt__uvod p { margin-top: 10px; color: var(--tlumeny); font-size: 1.1rem; }
+.kontakt__udaje { display: grid; gap: 1px; background: var(--linka); border: 1px solid var(--linka); border-radius: 12px; overflow: hidden; }
+@media (min-width: 600px) { .kontakt__udaje { grid-template-columns: 1fr 1fr; } }
+.kontakt__polozka { background: var(--panel); padding: 18px 20px; }
+.kontakt__polozka dt { display: flex; gap: 8px; align-items: center; font-family: "IBM Plex Mono", monospace; font-size: .85rem; color: var(--tlumeny); }
+.kontakt__polozka dd { margin-top: 6px; }
+.kontakt__polozka--tel { background: var(--panel2); }
+
+.paticka { border-top: 1px solid var(--linka); background: #0b0f13; color: var(--tlumeny); padding-block: 40px; font-size: .95rem; --logo-ink: #e6edf3; --logo-ink2: #a4b3c1; }
+.paticka__in { display: grid; gap: 20px; }
+@media (min-width: 900px) { .paticka__in { grid-template-columns: 1fr 1.5fr; } .paticka__copy { grid-column: 1 / -1; } }
+.logo-slot--paticka { --logo-vyska: 42px; --logo-vyska-mobil: 36px; }
+.paticka__znacka p { margin-top: 8px; }
+.paticka__udaje { display: grid; gap: 4px; }
+.paticka__udaje span { font-family: "IBM Plex Mono", monospace; font-size: .85em; }
+.paticka__copy { font-family: "IBM Plex Mono", monospace; font-size: .85rem; }

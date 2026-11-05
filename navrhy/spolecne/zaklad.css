@@ -1,0 +1,37 @@
+/* Společný základ všech 5 návrhů. Vzhled každého návrhu je v designy/design-N.css. */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+body { margin: 0; overflow-x: hidden; }
+img, svg { max-width: 100%; }
+h1, h2, h3, p, ul, ol, dl, dd { margin: 0; }
+ul[class], ol[class], .menu ul { list-style: none; padding: 0; margin: 0; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid currentColor; outline-offset: 3px; }
+.wrap { width: 100%; max-width: 1200px; margin-inline: auto; padding-inline: 20px; }
+@media (min-width: 900px) { .wrap { padding-inline: 40px; } }
+.skip { position: absolute; left: -9999px; top: 0; }
+.skip:focus { left: 8px; top: 8px; z-index: 100; background: #fff; color: #000; padding: 8px 12px; }
+.ikona { width: 1.25em; height: 1.25em; flex: none; vertical-align: -0.2em; }
+/* Slot loga: pevná výška, šířka podle loga – logo jde vyměnit za jiné */
+.logo-slot { display: inline-flex; align-items: center; height: var(--logo-vyska, 56px); flex: none; text-decoration: none; }
+.logo-slot svg { height: 100%; width: auto; max-width: none; display: block; }
+@media (max-width: 480px) { .logo-slot { height: var(--logo-vyska-mobil, 42px); } }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5em; min-height: 48px; padding: .6em 1.2em;
+       text-decoration: none; font-weight: 700; line-height: 1.15; cursor: pointer; text-align: center; }
+.doplnit { white-space: normal; overflow-wrap: anywhere; }
+/* Mobil: hlavička se neposouvá s obrazovkou (menu má dva řádky), menu hustší */
+@media (max-width: 959px) {
+  .hlavicka { position: relative !important; }
+  .hlavicka__in { column-gap: 12px !important; }
+  .menu ul { column-gap: 16px !important; }
+  .menu a { font-size: .92rem !important; }
+}
+/* Nejužší mobily (do 400 px): menší logo a tlačítko, aby se vešly vedle sebe */
+@media (max-width: 400px) {
+  .hlavicka .logo-slot { height: 36px; }
+  .hlavicka .btn--tel { font-size: .74rem !important; padding: .3em .6em !important; gap: .35em; }
+}

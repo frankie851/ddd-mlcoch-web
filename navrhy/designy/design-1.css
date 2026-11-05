@@ -1,0 +1,108 @@
+/* NÁVRH 1 – Čistý hygienický: hodně bílé, svěží zelená a tyrkysová, laboratorní pořádek. Písmo Manrope. */
+:root {
+  --text: #10302b; --tlumeny: #45615b; --tyrkys: #0f766e; --tyrkys-tmavy: #0b5a54; --zelena: #10a35a;
+  --mata: #eef7f4; --linka: #d5e3df; --bila: #fff;
+}
+body { font-family: "Manrope", "DejaVu Sans", sans-serif; color: var(--text); background: var(--bila); font-size: 1.0625rem; line-height: 1.6; }
+h1, h2, h3 { line-height: 1.15; letter-spacing: -0.02em; font-weight: 800; }
+.doplnit { background: #fff6d6; color: #5c4400; border-bottom: 2px dashed #d9a400; padding: 0 .2em; border-radius: 3px; font-weight: 700; }
+
+/* hlavička */
+.hlavicka { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.96); border-bottom: 1px solid var(--linka); backdrop-filter: blur(6px); }
+.hlavicka__in { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 24px; min-height: 76px; padding-block: 10px; }
+.menu { order: 3; width: 100%; }
+.menu ul { display: flex; flex-wrap: wrap; gap: 2px 18px; }
+.menu a { display: inline-block; padding: 6px 0; text-decoration: none; font-weight: 700; font-size: .95rem; color: var(--tlumeny); }
+.menu a:hover { color: var(--tyrkys); }
+.btn--tel { margin-left: auto; background: var(--tyrkys); color: #fff; border-radius: 999px; font-size: .95rem; padding: .5em 1.1em; min-height: 44px; }
+.btn--tel:hover { background: var(--tyrkys-tmavy); }
+.btn--tel .doplnit { background: transparent; color: #fff; border-bottom-color: #9be3d3; padding: 0; }
+@media (min-width: 960px) {
+  .menu { order: 2; width: auto; margin-left: auto; }
+  .btn--tel { margin-left: 0; order: 3; }
+}
+@media (max-width: 480px) { .btn--tel { font-size: .82rem; padding: .45em .8em; } }
+
+/* úvod */
+.uvod { background: linear-gradient(180deg, var(--mata), #fff 85%); }
+.uvod__in { display: grid; gap: 32px; padding-block: 48px 56px; align-items: center; }
+.nadtitulek { display: inline-block; font-weight: 700; color: var(--tyrkys); background: #dff1ec; border-radius: 999px; padding: 4px 14px; font-size: .9rem; }
+.uvod h1 { font-size: clamp(2.6rem, 8vw, 4.6rem); margin: 18px 0 14px; color: var(--text); }
+.perex { font-size: 1.2rem; color: var(--tlumeny); max-width: 34em; }
+.akce { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.btn--hlavni { background: #0b7a43; color: #fff; border-radius: 12px; font-size: 1.1rem; padding: .7em 1.6em; }
+.btn--hlavni:hover { background: #0a6f3d; }
+.btn--vedlejsi { color: var(--tyrkys); border: 2px solid var(--linka); border-radius: 12px; background: #fff; }
+.btn--vedlejsi:hover { border-color: var(--tyrkys); }
+.uvod__kresba { width: 100%; max-width: 420px; height: auto; display: block; margin-inline: auto; }
+@media (min-width: 900px) { .uvod__in { grid-template-columns: 1.2fr 1fr; padding-block: 72px 72px; } }
+
+/* sekce obecně */
+.sekce { padding-block: 64px; }
+.sekce__hlava { max-width: 44rem; margin-bottom: 36px; }
+.sekce h2 { font-size: clamp(1.8rem, 4.5vw, 2.6rem); }
+.sekce__hlava p { color: var(--tlumeny); margin-top: 10px; font-size: 1.1rem; }
+
+/* služby */
+.sluzby__mrizka { display: grid; gap: 20px; }
+@media (min-width: 860px) { .sluzby__mrizka { grid-template-columns: repeat(3, 1fr); } }
+.sluzba { border: 1px solid var(--linka); border-radius: 18px; padding: 28px; background: #fff; box-shadow: 0 1px 0 var(--linka), 0 12px 30px -20px rgba(15,61,56,.35); }
+.sluzba__ikona, .skupina__ikona { width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; background: #dff1ec; color: var(--tyrkys); margin-bottom: 16px; }
+.sluzba__ikona .ikona, .skupina__ikona .ikona { width: 28px; height: 28px; }
+.sluzba h3 { font-size: 1.4rem; margin-bottom: 8px; }
+.sluzba p + p { margin-top: 8px; }
+.sluzba__co { font-weight: 700; }
+.sluzba strong { color: var(--tyrkys-tmavy); }
+
+/* pro koho */
+.prokoho { background: var(--mata); }
+.prokoho__mrizka { display: grid; gap: 20px; }
+@media (min-width: 860px) { .prokoho__mrizka { grid-template-columns: repeat(3, 1fr); } }
+.skupina { background: #fff; border-radius: 18px; padding: 28px; border-top: 4px solid var(--tyrkys); }
+.skupina h3 { font-size: 1.25rem; margin-bottom: 8px; }
+.skupina p { color: var(--tlumeny); }
+
+/* postup */
+.postup__kroky { display: grid; gap: 24px; counter-reset: k; }
+@media (min-width: 860px) {
+  .postup__kroky { grid-template-columns: repeat(4, 1fr); position: relative; }
+  .postup__kroky::before { content: ""; position: absolute; top: 24px; left: 24px; right: 12%; height: 2px; background: var(--linka); }
+}
+.krok { position: relative; }
+.krok__cislo { position: relative; display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; background: var(--tyrkys); color: #fff; font-weight: 800; font-size: 1.2rem; margin-bottom: 14px; box-shadow: 0 0 0 6px #fff; }
+.krok__ikona { display: none; }
+.krok h3 { font-size: 1.2rem; margin-bottom: 6px; }
+.krok p { color: var(--tlumeny); }
+
+/* oprávnění */
+.opravneni { border-top: 1px solid var(--linka); }
+.opravneni__in { display: grid; gap: 32px; }
+@media (min-width: 900px) { .opravneni__in { grid-template-columns: 1.1fr 1fr; } }
+.opravneni__text h2 { margin-bottom: 16px; }
+.opravneni__text p + p { margin-top: 12px; }
+.opravneni__seznam { display: grid; gap: 12px; }
+.opravneni__seznam li { display: flex; gap: 14px; padding: 18px; border: 1px solid var(--linka); border-radius: 14px; background: #fbfdfc; }
+.opravneni__seznam .ikona { color: var(--zelena); width: 28px; height: 28px; }
+
+/* kontakt */
+.kontakt { background: var(--tyrkys); color: #fff; }
+.kontakt__in { display: grid; gap: 28px; }
+@media (min-width: 900px) { .kontakt__in { grid-template-columns: 1fr 1.6fr; align-items: start; } }
+.kontakt__uvod p { margin-top: 10px; font-size: 1.15rem; color: #e3f6f1; }
+.kontakt__udaje { display: grid; gap: 12px; }
+@media (min-width: 600px) { .kontakt__udaje { grid-template-columns: 1fr 1fr; } }
+.kontakt__polozka { background: #fff; color: var(--text); border-radius: 14px; padding: 16px 18px; }
+.kontakt__polozka dt { display: flex; align-items: center; gap: 8px; font-size: .85rem; font-weight: 700; color: var(--tlumeny); text-transform: uppercase; letter-spacing: .04em; }
+.kontakt__polozka dt .ikona { color: var(--tyrkys); }
+.kontakt__polozka dd { margin-top: 4px; font-weight: 700; }
+.kontakt__polozka--tel dd { font-size: 1.25rem; }
+
+/* patička */
+.paticka { background: #0f2b27; color: #cfe3de; padding-block: 40px; font-size: .95rem; --logo-ink: #f3fbf8; --logo-ink2: #b9d3cc; }
+.paticka__in { display: grid; gap: 20px; }
+.logo-slot--paticka { --logo-vyska: 44px; --logo-vyska-mobil: 38px; }
+.paticka__znacka p { margin-top: 8px; }
+.paticka__udaje { display: grid; gap: 4px; }
+.paticka__udaje span { color: #93b3ab; }
+.paticka .doplnit { background: #24433d; color: #ffe08a; border-bottom-color: #c49a1a; }
+.paticka__copy { color: #93b3ab; }

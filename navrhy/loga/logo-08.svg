@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../spolecne/pisma.css"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 100" role="img" aria-label="DDD Mlčoch – logo">
+  <g class="znacka">
+  <circle cx="50" cy="50" r="48" fill="#e2603f"/>
+  <g transform="translate(25 69) rotate(-45) scale(0.82)" fill="#fff"><path d="M-9-9h6a9 9 0 0 1 0 18h-6z"/><circle cx="11" cy="-10" r="3"/><circle cx="14.5" cy="-3.6" r="3"/><circle cx="14.5" cy="3.6" r="3"/><circle cx="11" cy="10" r="3"/></g><g transform="translate(51 57) rotate(-45) scale(0.82)" fill="#fff"><path d="M-9-9h6a9 9 0 0 1 0 18h-6z"/><circle cx="11" cy="-10" r="3"/><circle cx="14.5" cy="-3.6" r="3"/><circle cx="14.5" cy="3.6" r="3"/><circle cx="11" cy="10" r="3"/></g><g transform="translate(57 29) rotate(-45) scale(0.82)" fill="#fff"><path d="M-9-9h6a9 9 0 0 1 0 18h-6z"/><circle cx="11" cy="-10" r="3"/><circle cx="14.5" cy="-3.6" r="3"/><circle cx="14.5" cy="3.6" r="3"/><circle cx="11" cy="10" r="3"/></g>
+  </g>
+  <text x="116.0" y="58.0" font-family="'Bitter','DejaVu Serif',serif" font-weight="700" font-size="40" style="fill:#e2603f">DDD</text>
+  <text x="211.0" y="58.0" font-family="'Bitter','DejaVu Serif',serif" font-weight="700" font-size="40" style="fill:var(--logo-ink,#1c2420)">Mlčoch</text>
+  <text x="117.0" y="84.0" font-family="'Source Sans 3','DejaVu Sans',sans-serif" font-weight="600" font-size="15" style="fill:var(--logo-ink2,#4b5651)">Stopy vedou pryč.</text>
+</svg>

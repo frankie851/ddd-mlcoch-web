@@ -1,0 +1,100 @@
+/* NÁVRH 3 – Výstražný: žlutá a černá, výstražné pásky, „zásahová jednotka“. Písma Barlow Condensed + Barlow. */
+:root { --zluta: #ffcc00; --cerna: #121212; --seda: #2a2a2a; --text: #121212; --tlumeny: #3d3d3d; --bila: #fff; --papir: #f5f3ec;
+  --paska: repeating-linear-gradient(-45deg, var(--zluta) 0 18px, var(--cerna) 18px 36px); }
+body { font-family: "Barlow", "DejaVu Sans", sans-serif; color: var(--text); background: var(--papir); font-size: 1.0625rem; line-height: 1.6; }
+h1, h2, h3 { font-family: "Barlow Condensed", "DejaVu Sans Condensed", sans-serif; font-weight: 800; text-transform: uppercase; line-height: 1; letter-spacing: .01em; }
+.doplnit { background: #fff0a8; color: #3b2f00; border-bottom: 2px dashed #121212; padding: 0 .25em; font-weight: 600; }
+
+.hlavicka { background: var(--cerna); color: #fff; position: sticky; top: 0; z-index: 20; --logo-ink: #ffffff; --logo-ink2: #d6d6d6; }
+.hlavicka::after { content: ""; display: block; height: 10px; background: var(--paska); }
+.hlavicka__in { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px; padding-block: 12px; }
+.menu { order: 3; width: 100%; }
+.menu ul { display: flex; flex-wrap: wrap; gap: 0 18px; }
+.menu a { display: inline-block; padding: 4px 0; font-family: "Barlow Condensed", sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; text-decoration: none; color: #fff; font-size: 1.05rem; }
+.menu a:hover { color: var(--zluta); }
+.btn--tel { margin-left: auto; background: var(--zluta); color: var(--cerna); font-family: "Barlow Condensed", sans-serif; font-size: 1.05rem; text-transform: uppercase; min-height: 44px; padding: .4em 1em; clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%); }
+.btn--tel .doplnit { background: transparent; border: 0; color: var(--cerna); padding: 0; }
+@media (min-width: 960px) { .menu { order: 2; width: auto; margin-left: auto; } .btn--tel { margin-left: 0; order: 3; } }
+@media (max-width: 480px) { .btn--tel { font-size: .9rem; padding: .35em .9em; } }
+
+.uvod { background: var(--zluta); position: relative; overflow: hidden; }
+.uvod::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 22px; background: var(--paska); }
+.uvod__in { display: grid; gap: 28px; padding-block: 48px 72px; align-items: center; }
+@media (min-width: 900px) { .uvod__in { grid-template-columns: 1.5fr 1fr; padding-block: 72px 100px; } }
+.nadtitulek { display: inline-block; background: var(--cerna); color: var(--zluta); font-family: "Barlow Condensed", sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; padding: 4px 12px; }
+.uvod h1 { font-size: clamp(3.4rem, 15vw, 8rem); margin: 16px 0 12px; color: var(--cerna); }
+.perex { font-size: 1.25rem; font-weight: 600; max-width: 30em; }
+.akce { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.btn--hlavni { background: var(--cerna); color: var(--zluta); font-family: "Barlow Condensed", sans-serif; font-size: 1.4rem; text-transform: uppercase; letter-spacing: .04em; padding: .5em 1.5em; box-shadow: 6px 6px 0 rgba(0,0,0,.25); }
+.btn--hlavni:hover { background: #333; }
+.btn--vedlejsi { border: 3px solid var(--cerna); color: var(--cerna); font-family: "Barlow Condensed", sans-serif; font-size: 1.2rem; text-transform: uppercase; }
+.uvod__razitko { justify-self: center; display: grid; place-items: center; text-align: center; width: min(280px, 70vw); aspect-ratio: 1; border: 8px solid var(--cerna); border-radius: 50%;
+  outline: 3px solid var(--cerna); outline-offset: 6px; transform: rotate(-12deg); font-family: "Barlow Condensed", sans-serif; font-weight: 800; text-transform: uppercase; color: var(--cerna); line-height: .95; padding: 20px; }
+.uvod__razitko span { display: block; font-size: clamp(1.6rem, 6vw, 2.4rem); }
+.uvod__razitko span:last-child { font-size: clamp(3rem, 12vw, 4.6rem); border-top: 4px solid; margin-top: 8px; padding-top: 4px; }
+
+.sekce { padding-block: 64px; }
+.sekce__hlava { margin-bottom: 32px; max-width: 46rem; }
+.sekce h2 { font-size: clamp(2.4rem, 7vw, 3.8rem); }
+.sekce__hlava p { margin-top: 10px; font-size: 1.15rem; color: var(--tlumeny); }
+
+.sluzby { background: var(--cerna); color: #f1f1f1; }
+.sluzby h2 { color: var(--zluta); }
+.sluzby .sekce__hlava p { color: #d6d6d6; }
+.sluzby__mrizka { display: grid; gap: 20px; counter-reset: s; }
+@media (min-width: 860px) { .sluzby__mrizka { grid-template-columns: repeat(3, 1fr); } }
+.sluzba { counter-increment: s; background: var(--seda); border-left: 8px solid var(--zluta); padding: 24px; position: relative; }
+.sluzba::before { content: "0" counter(s); position: absolute; right: 18px; top: 10px; font-family: "Barlow Condensed", sans-serif; font-weight: 800; font-size: 3rem; color: #454545; }
+.sluzba__ikona { color: var(--zluta); margin-bottom: 10px; }
+.sluzba__ikona .ikona { width: 40px; height: 40px; }
+.sluzba h3 { font-size: 2rem; color: #fff; margin-bottom: 8px; }
+.sluzba__co { font-weight: 600; color: #fff; }
+.sluzba p + p { margin-top: 8px; }
+.sluzba strong { color: var(--zluta); text-transform: uppercase; font-size: .9em; letter-spacing: .05em; }
+
+.prokoho__mrizka { display: grid; gap: 20px; }
+@media (min-width: 860px) { .prokoho__mrizka { grid-template-columns: repeat(3, 1fr); } }
+.skupina { background: #fff; border: 4px solid var(--cerna); padding: 24px; box-shadow: 8px 8px 0 var(--zluta); }
+.skupina__ikona { display: inline-grid; place-items: center; width: 56px; height: 56px; background: var(--zluta); border: 3px solid var(--cerna); margin-bottom: 12px; }
+.skupina__ikona .ikona { width: 30px; height: 30px; }
+.skupina h3 { font-size: 1.8rem; margin-bottom: 8px; }
+
+.postup { background: var(--zluta); }
+.postup__kroky { display: grid; gap: 4px; }
+@media (min-width: 860px) { .postup__kroky { grid-template-columns: repeat(4, 1fr); } }
+.krok { background: var(--cerna); color: #f1f1f1; padding: 24px 22px 28px; position: relative; }
+@media (min-width: 860px) { .krok { clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 50%, calc(100% - 18px) 100%, 0 100%, 18px 50%); padding-inline: 38px; } .krok:first-child { clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 50%, calc(100% - 18px) 100%, 0 100%); } }
+.krok__cislo { font-family: "Barlow Condensed", sans-serif; font-weight: 800; font-size: 3.4rem; line-height: 1; color: var(--zluta); }
+.krok__ikona { display: none; }
+.krok h3 { font-size: 1.6rem; margin: 6px 0; color: #fff; }
+
+.opravneni__in { display: grid; gap: 28px; }
+@media (min-width: 900px) { .opravneni__in { grid-template-columns: 1.2fr 1fr; } }
+.opravneni__text h2 { margin-bottom: 16px; }
+.opravneni__text p + p { margin-top: 12px; }
+.opravneni__seznam { display: grid; gap: 12px; border: 4px solid var(--cerna); padding: 18px; background: #fff; position: relative; }
+.opravneni__seznam::before { content: ""; display: block; height: 12px; margin: -18px -18px 6px; background: var(--paska); }
+.opravneni__seznam li { display: flex; gap: 12px; }
+.opravneni__seznam .ikona { width: 28px; height: 28px; }
+
+.kontakt { background: var(--cerna); color: #fff; }
+.kontakt h2 { color: var(--zluta); }
+.kontakt__in { display: grid; gap: 28px; }
+@media (min-width: 900px) { .kontakt__in { grid-template-columns: 1fr 1.6fr; } }
+.kontakt__uvod p { margin-top: 10px; font-size: 1.15rem; color: #e6e6e6; }
+.kontakt__udaje { display: grid; gap: 10px; }
+@media (min-width: 600px) { .kontakt__udaje { grid-template-columns: 1fr 1fr; } }
+.kontakt__polozka { border: 2px solid #555; padding: 14px 16px; }
+.kontakt__polozka--tel { border-color: var(--zluta); }
+.kontakt__polozka dt { display: flex; gap: 8px; align-items: center; color: var(--zluta); font-family: "Barlow Condensed", sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; }
+.kontakt__polozka dd { margin-top: 4px; font-weight: 600; }
+.kontakt .doplnit { background: #3a3200; color: #ffe066; border-bottom-color: var(--zluta); }
+
+.paticka { background: var(--cerna); color: #cfcfcf; padding-block: 0 36px; font-size: .95rem; --logo-ink: #fff; --logo-ink2: #d0d0d0; }
+.paticka::before { content: ""; display: block; height: 14px; background: var(--paska); margin-bottom: 36px; }
+.paticka__in { display: grid; gap: 18px; }
+.logo-slot--paticka { --logo-vyska: 44px; --logo-vyska-mobil: 38px; }
+.paticka__znacka p { margin-top: 8px; }
+.paticka__udaje span { color: #a8a8a8; }
+.paticka .doplnit { background: #3a3200; color: #ffe066; border-bottom-color: var(--zluta); }
+.paticka__copy { color: #a8a8a8; }

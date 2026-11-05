@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../spolecne/pisma.css"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 344 100" role="img" aria-label="DDD Mlčoch – logo">
+  <g class="znacka">
+  <rect x="2" y="2" width="96" height="96" rx="24" fill="#0f766e"/>
+  <path d="M11 50 19 22 28 78 37 30 46 68 54 40 61 58 67 47 72 50H86" fill="none" stroke="#fff" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="87" cy="50" r="5.5" fill="#7ff0dd"/>
+  </g>
+  <text x="116.0" y="58.0" font-family="'IBM Plex Sans','DejaVu Sans',sans-serif" font-weight="600" font-size="40" style="fill:#14b8a6">DDD</text>
+  <text x="208.3" y="58.0" font-family="'IBM Plex Sans','DejaVu Sans',sans-serif" font-weight="600" font-size="40" style="fill:var(--logo-ink,#1c2420)">Mlčoch</text>
+  <text x="117.0" y="84.0" font-family="'IBM Plex Mono','DejaVu Sans Mono',monospace" font-weight="500" font-size="15" style="fill:var(--logo-ink2,#4b5651)">Škůdci zmlknou.</text>
+</svg>

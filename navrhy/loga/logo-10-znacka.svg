@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../spolecne/pisma.css"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="DDD Mlčoch – značka">
+  <rect x="2" y="2" width="96" height="96" rx="22" fill="#ffe3cc"/>
+  <path d="M27 76q-13 2-13 11q0 6 8 5" fill="none" stroke="#2d3150" stroke-width="3.6" stroke-linecap="round"/>
+  <circle cx="51" cy="25" r="10" fill="#2d3150"/><circle cx="51" cy="25" r="5.5" fill="#f39aa8"/>
+  <path fill="#2d3150" fill-rule="evenodd" d="M26 24h22a27 27 0 0 1 0 54H26ZM37 35v32h11a16 16 0 0 0 0-32Z"/>
+  <circle cx="64" cy="38" r="3.2" fill="#fff"/>
+  <circle cx="75.5" cy="51" r="4" fill="#f06b84"/>
+  <path d="M76 55l13 3M76 58l12 7" stroke="#2d3150" stroke-width="1.6" stroke-linecap="round"/>
+</svg>

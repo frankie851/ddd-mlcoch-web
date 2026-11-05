@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../spolecne/pisma.css"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 100" role="img" aria-label="DDD Mlčoch – logo">
+  <g class="znacka">
+  <circle cx="50" cy="50" r="48" fill="#6b7a34"/>
+  <path d="M10 80H90" stroke="#a9b56a" stroke-width="3" stroke-linecap="round"/>
+  <path d="M30 68q-15 5-18-8q-2-9 6-11" fill="none" stroke="#d9c7ab" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M41 76v4M55 76v4" stroke="#d9c7ab" stroke-width="5" stroke-linecap="round"/>
+  <ellipse cx="47" cy="65" rx="19" ry="13" fill="#d9c7ab"/>
+  <path d="M59 47Q72 44 84 59Q73 66 58 64Z" fill="#d9c7ab"/>
+  <circle cx="62" cy="46" r="8" fill="#d9c7ab"/><circle cx="62" cy="46" r="4.5" fill="#efa0a8"/>
+  <circle cx="71" cy="54" r="2.3" fill="#2a2a20"/><circle cx="84" cy="59" r="2.6" fill="#d76a7c"/>
+  <path d="M62 60v-5h12v5" fill="none" stroke="#5a3418" stroke-width="2.6" stroke-linejoin="round"/>
+  <rect x="56" y="59" width="24" height="17" rx="3" fill="#a0582a" stroke="#5a3418" stroke-width="2"/>
+  <path d="M56 66h24" stroke="#5a3418" stroke-width="1.6"/><rect x="65" y="64" width="6" height="4" rx="1" fill="#f2c14e"/>
+  <circle cx="66" cy="57" r="3.5" fill="#cdb898"/>
+  <path d="M8 58h7M5 66h8M9 74h6" stroke="#a9b56a" stroke-width="2.4" stroke-linecap="round"/>
+  </g>
+  <text x="116.0" y="58.0" font-family="'Bitter','DejaVu Serif',serif" font-weight="700" font-size="40" style="fill:#7d8f2e">DDD</text>
+  <text x="211.0" y="58.0" font-family="'Bitter','DejaVu Serif',serif" font-weight="700" font-size="40" style="fill:var(--logo-ink,#1c2420)">Mlčoch</text>
+  <text x="117.0" y="84.0" font-family="'Barlow Condensed','DejaVu Sans Condensed',sans-serif" font-weight="700" font-size="15" style="fill:var(--logo-ink2,#4b5651)">ŠKŮDCI SE STĚHUJÍ.</text>
+</svg>

@@ -1,0 +1,47 @@
+/* Vzhled galerie navrhy/index.html */
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: "Manrope", "DejaVu Sans", sans-serif; color: #1c2420; background: #f3f3ef; line-height: 1.55; font-size: 1.0625rem; overflow-x: hidden; }
+h1, h2, h3, p { margin: 0; }
+.obal { width: 100%; max-width: 1240px; margin-inline: auto; padding-inline: 16px; }
+@media (min-width: 800px) { .obal { padding-inline: 32px; } }
+.hlava { background: #1c2420; color: #f3f3ef; padding-block: 32px 28px; }
+.nadtitulek { color: #9fd8b9; font-weight: 700; font-size: .95rem; }
+h1 { font-size: clamp(1.9rem, 6vw, 3rem); line-height: 1.1; margin: 6px 0 18px; font-weight: 800; }
+.navod { background: #fff; color: #1c2420; border-radius: 14px; padding: 18px 20px; border-left: 6px solid #10a35a; display: grid; gap: 10px; max-width: 60rem; }
+.doplnit { background: #fff6d6; color: #5c4400; border-bottom: 2px dashed #d9a400; padding: 0 .2em; font-weight: 700; }
+.skoky { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.skoky a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 999px; background: #10a35a; color: #fff; font-weight: 700; text-decoration: none; }
+section { padding-block: 40px 16px; }
+h2 { font-size: clamp(1.6rem, 4.5vw, 2.2rem); font-weight: 800; }
+.uvodni { margin: 6px 0 24px; color: #4b5651; }
+.cislo { display: inline-grid; place-items: center; min-width: 2em; height: 2em; border-radius: 50%; background: #1c2420; color: #fff; font-size: .85em; margin-right: 6px; vertical-align: .1em; }
+h3 { font-size: 1.3rem; font-weight: 800; line-height: 1.25; }
+
+.loga-mrizka { display: grid; gap: 18px; }
+@media (min-width: 820px) { .loga-mrizka { grid-template-columns: 1fr 1fr; } }
+.logo-karta { background: #fff; border-radius: 16px; padding: 18px; display: grid; gap: 12px; border: 1px solid #deded6; }
+.logo-karta > p { color: #4b5651; }
+.logo-nahled { border-radius: 10px; padding: 16px; display: flex; align-items: center; justify-content: center; height: 112px; }
+.logo-nahled svg { height: 100%; width: auto; max-width: 100%; }
+.svetle { background: #fff; border: 1px solid #e4e4dc; }
+.tmave { background: #1d2023; --logo-ink: #f3f1ea; --logo-ink2: #c9cdc6; }
+.znacky { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; font-size: .9rem; color: #4b5651; }
+.z32 svg { width: 32px; height: 32px; display: block; }
+.z64 svg { width: 64px; height: 64px; display: block; }
+
+.designy-seznam { display: grid; gap: 28px; }
+.design-karta { background: #fff; border-radius: 18px; padding: 20px; border: 1px solid #deded6; display: grid; gap: 20px; }
+@media (min-width: 960px) { .design-karta { grid-template-columns: 1fr 2fr; align-items: start; } }
+.design-karta__text { display: grid; gap: 10px; align-content: start; }
+.drobne { font-size: .92rem; color: #4b5651; }
+.otevrit { display: inline-flex; align-items: center; min-height: 48px; padding: 8px 18px; border-radius: 10px; background: #1c2420; color: #fff; font-weight: 700; text-decoration: none; justify-self: start; }
+.otevrit:hover, .otevrit:focus-visible { background: #10a35a; }
+.nahledy { display: grid; grid-template-columns: minmax(0, 2.4fr) minmax(0, 1fr); gap: 14px; }
+.nahled { margin: 0; }
+.nahled figcaption { font-weight: 700; font-size: .9rem; color: #4b5651; margin-bottom: 6px; }
+.nahled__okno { height: 420px; overflow-y: auto; border: 1px solid #cfcfc6; border-radius: 10px; background: #eee; }
+.nahled__okno img { display: block; width: 100%; height: auto; }
+.ramec { width: 100%; height: 420px; border: 0; display: block; }
+@media (max-width: 600px) { .nahled__okno, .ramec { height: 340px; } }
+.paticka { padding-block: 32px 48px; color: #4b5651; font-size: .95rem; }
+.paticka a { color: inherit; }

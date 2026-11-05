@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../spolecne/pisma.css"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 100" role="img" aria-label="DDD Mlčoch – logo">
+  <g class="znacka">
+  <circle cx="50" cy="50" r="47" fill="#f6ead2" stroke="#c8322b" stroke-width="6"/>
+  <circle cx="50" cy="50" r="39" fill="none" stroke="#2b2622" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <circle cx="29" cy="59" r="4.5" fill="#f1bf92"/><circle cx="71" cy="59" r="4.5" fill="#f1bf92"/>
+  <circle cx="50" cy="59" r="21" fill="#f5cba3"/>
+  <path d="M27 53Q27 27 50 27Q73 27 73 53Z" fill="#c8322b"/>
+  <path d="M27 53H86Q88 59 80 59H27Z" fill="#9e2420"/>
+  <circle cx="50" cy="27" r="3" fill="#9e2420"/>
+  <text x="50" y="47" text-anchor="middle" font-family="'Alfa Slab One','DejaVu Serif',serif" font-size="13" fill="#f6ead2">M</text>
+  <circle cx="43" cy="62" r="2.6" fill="#2b2622"/>
+  <path d="M54 62q3.5-3 7 0" fill="none" stroke="#2b2622" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M37 71q6.5-6 13-2q6.5-4 13 2q-6.5 3.5-13 0q-6.5 3.5-13 0Z" fill="#5a3a26"/>
+  <path d="M44 75q6 4 12 0" fill="none" stroke="#2b2622" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <text x="116.0" y="54.0" font-family="'Alfa Slab One','DejaVu Serif',serif" font-weight="400" font-size="36" style="fill:#c8322b">DDD</text>
+  <text x="212.8" y="58.0" font-family="'Pacifico','DejaVu Serif',cursive" font-weight="400" font-size="38" style="fill:var(--logo-ink,#1c2420)">Mlčoch</text>
+  <text x="117.0" y="86.0" font-family="'Barlow Condensed','DejaVu Sans Condensed',sans-serif" font-weight="700" font-size="13.5" style="fill:var(--logo-ink2,#4b5651)" letter-spacing="0.6">DERATIZACE · DEZINSEKCE · DEZINFEKCE</text>
+</svg>

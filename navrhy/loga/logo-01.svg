@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../spolecne/pisma.css"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 100" role="img" aria-label="DDD Mlčoch – logo">
+  <g class="znacka">
+  <clipPath id="l01-kruh"><circle cx="50" cy="50" r="48"/></clipPath>
+  <circle cx="50" cy="50" r="48" fill="#1f7a4d"/>
+  <g clip-path="url(#l01-kruh)">
+    <path d="M23 41q8 8 16 0M61 41q8 8 16 0" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+    <ellipse cx="50" cy="67" rx="18" ry="7.5" fill="#f28b7f"/>
+    <path d="M33 67h34" stroke="#b9473d" stroke-width="2.4" stroke-linecap="round"/>
+    <ellipse cx="50" cy="104" rx="23" ry="16" fill="#ffd6ad" stroke="#d99a68" stroke-width="2"/>
+    <rect x="42.5" y="45" width="15" height="50" rx="7.5" fill="#ffd6ad" stroke="#d99a68" stroke-width="2"/>
+    <rect x="45.3" y="48" width="9.4" height="10" rx="4" fill="#fff1e0"/>
+  </g>
+  </g>
+  <text x="116.0" y="58.0" font-family="'Source Sans 3','DejaVu Sans',sans-serif" font-weight="700" font-size="40" style="fill:#23955c">DDD</text>
+  <text x="201.8" y="58.0" font-family="'Source Sans 3','DejaVu Sans',sans-serif" font-weight="700" font-size="40" style="fill:var(--logo-ink,#1c2420)">Mlčoch</text>
+  <text x="117.0" y="84.0" font-family="'Source Sans 3','DejaVu Sans',sans-serif" font-weight="600" font-size="15" style="fill:var(--logo-ink2,#4b5651)">Po nás je ticho.</text>
+</svg>
