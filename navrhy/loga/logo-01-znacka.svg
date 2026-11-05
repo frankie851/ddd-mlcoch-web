@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../spolecne/pisma.css"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="DDD Mlčoch – značka">
+  <clipPath id="l01-kruh"><circle cx="50" cy="50" r="48"/></clipPath>
+  <circle cx="50" cy="50" r="48" fill="#1f7a4d"/>
+  <g clip-path="url(#l01-kruh)">
+    <path d="M23 41q8 8 16 0M61 41q8 8 16 0" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+    <ellipse cx="50" cy="67" rx="18" ry="7.5" fill="#f28b7f"/>
+    <path d="M33 67h34" stroke="#b9473d" stroke-width="2.4" stroke-linecap="round"/>
+    <ellipse cx="50" cy="104" rx="23" ry="16" fill="#ffd6ad" stroke="#d99a68" stroke-width="2"/>
+    <rect x="42.5" y="45" width="15" height="50" rx="7.5" fill="#ffd6ad" stroke="#d99a68" stroke-width="2"/>
+    <rect x="45.3" y="48" width="9.4" height="10" rx="4" fill="#fff1e0"/>
+  </g>
+</svg>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../spolecne/pisma.css"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 100" role="img" aria-label="DDD Mlčoch – logo">
+  <g class="znacka">
+  <circle cx="50" cy="50" r="48" fill="#f2b705"/>
+  <circle cx="29" cy="27" r="14" fill="#9aa1aa"/><circle cx="71" cy="27" r="14" fill="#9aa1aa"/>
+  <circle cx="29" cy="27" r="8" fill="#f5a7b8"/><circle cx="71" cy="27" r="8" fill="#f5a7b8"/>
+  <ellipse cx="50" cy="46" rx="25" ry="21" fill="#b3b9c1"/>
+  <circle cx="41" cy="42" r="3.6" fill="#1e2328"/><circle cx="59" cy="42" r="3.6" fill="#1e2328"/>
+  <circle cx="42.2" cy="40.8" r="1.2" fill="#fff"/><circle cx="60.2" cy="40.8" r="1.2" fill="#fff"/>
+  <ellipse cx="50" cy="52" rx="4" ry="3" fill="#e9798f"/>
+  <path d="M44 54 28 51M44 57 29 60M56 54 72 51M56 57 71 60" stroke="#5b6168" stroke-width="1.6" stroke-linecap="round"/>
+  <rect x="21" y="60" width="58" height="28" rx="5" fill="#fff" stroke="#1e2328" stroke-width="3"/>
+  <circle cx="25" cy="62" r="5.5" fill="#b3b9c1" stroke="#1e2328" stroke-width="1.5"/><circle cx="75" cy="62" r="5.5" fill="#b3b9c1" stroke="#1e2328" stroke-width="1.5"/>
+  <text x="50" y="82" text-anchor="middle" font-family="'Baloo 2','DejaVu Sans',sans-serif" font-weight="800" font-size="19" fill="#1e2328">PSST</text>
+  </g>
+  <text x="116.0" y="58.0" font-family="'Baloo 2','DejaVu Sans',sans-serif" font-weight="800" font-size="42" style="fill:#d99a00">DDD</text>
+  <text x="210.0" y="58.0" font-family="'Baloo 2','DejaVu Sans',sans-serif" font-weight="800" font-size="42" style="fill:var(--logo-ink,#1c2420)">Mlčoch</text>
+  <text x="117.0" y="84.0" font-family="'Baloo 2','DejaVu Sans',sans-serif" font-weight="700" font-size="15" style="fill:var(--logo-ink2,#4b5651)">Psst… už jsou pryč.</text>
+</svg>

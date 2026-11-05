@@ -2,17 +2,17 @@
 datum: 2026-11-05 · předává: krok 01 (návrhy) · přebírá: krok 02 (stavba webu)
 
 ## Stav jednou větou
-Rozpracováno – hotový základ repozitáře, pokračuje se logy.
+Rozpracováno – hotový základ repozitáře, písma a 10 log; pokračují texty.
 
 ## Průběh (odškrtávej po každém kroku, pak commit + push)
 - ☑ Krok 0 – základ repozitáře
-- ☐ Krok 1 – 10 log
+- ☑ Krok 1 – 10 log
 - ☐ Krok 2 – texty + ověření právních bodů
 - ☐ Krok 3 – 5 designů
 - ☐ Krok 4 – galerie
 - ☐ Krok 5 – kontrola v prohlížeči
 - ☐ Krok 6 – dokončení předávky
-Rozpracováno: krok 1 – loga v `navrhy/loga/`.
+Rozpracováno: krok 2 – texty `obsah/texty.md` a ověření právních bodů.
 
 ## Hotovo
 - Loga: (doplní se)
